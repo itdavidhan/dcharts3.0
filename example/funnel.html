@@ -18,13 +18,21 @@
 			['Video Views', 1500], ['Comments', 300], ['Video Responses', 150]
 		];
 
+		var ops = {
+			margin: {left: 50, top: 30, right: 50, bottom: 30}
+		};
+
 		var box1 = new dcharts('.box1');
-		box1.funnel(data);
+		var box2 = new dcharts('.box2');
+		box1.funnel(data, ops);
+		box2.funnel(data, ops);
 		
 
 		window.onresize = function() {
 			var box1 = new dcharts('.box1');
-			box1.funnel(data);
+			var box2 = new dcharts('.box2');
+			box1.funnel(data, ops);
+			box2.funnel(data, ops);
 		};
 	};
 	</script>

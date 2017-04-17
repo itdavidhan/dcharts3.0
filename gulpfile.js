@@ -28,6 +28,7 @@ gulp.task('dcct', function() {
         // path + 'bubble-chart.js',
         // path + 'index-card.js',
         path + 'funnel.js',
+        path + 'complex-bar.js',
         // path + 'legend.js',
         // path + 'callback.js',
         // path + 'tooltip.js',
