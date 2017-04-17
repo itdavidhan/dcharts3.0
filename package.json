@@ -1,0 +1,27 @@
+{
+  "name": "dcharts3.0",
+  "version": "1.0.0",
+  "description": "charts by d3.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itdavidhan/dcharts3.0.git"
+  },
+  "author": "davidhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itdavidhan/dcharts3.0/issues"
+  },
+  "homepage": "https://github.com/itdavidhan/dcharts3.0#readme",
+  "devDependencies": {
+    "d3": "^3.5.17",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-uglify": "^2.1.2",
+    "jquery": "^3.2.1"
+  }
+}

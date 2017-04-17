@@ -1,0 +1,288 @@
+* {padding: 0, margin: 0;}
+body {
+    font-family: "helvetica";
+}
+.dcharts-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.dcharts-container button {
+    margin: 0 7px 0 0;
+    background-color: #f5f5f5;
+    border: 1px solid #dedede;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+
+    font-size: 12px;
+    line-height: 130%;
+    text-decoration: none;
+    font-weight: bold;
+    color: #565656;
+    cursor: pointer;
+}
+
+.dcharts-container .box {
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    float: left;
+    text-align: center;
+    border: #969696 solid thin;
+    padding: 5px;
+}
+
+.dcharts-container .red {
+    background-color: #e9967a;
+    color: #f0f8ff;
+}
+
+.dcharts-container .blue {
+    background-color: #add8e6;
+    color: #f0f8ff;
+}
+
+.dcharts-container .cell {
+    min-width: 40px;
+    min-height: 20px;
+    margin: 5px;
+    float: left;
+    text-align: center;
+    border: #969696 solid thin;
+    padding: 5px;
+}
+
+.dcharts-container .fixed-cell {
+    min-width: 40px;
+    min-height: 20px;
+    margin: 5px;
+    position: fixed;
+    text-align: center;
+    border: #969696 solid thin;
+    padding: 5px;
+}
+
+.dcharts-container .h-bar {
+    min-height: 15px;
+    min-width: 10px;
+    background-color: steelblue;
+    margin-bottom: 2px;
+    font-size: 11px;
+    color: #f0f8ff;
+    text-align: right;
+    padding-right: 2px;
+}
+
+.dcharts-container .v-bar {
+    min-height: 1px;
+    min-width: 30px;
+    background-color: #4682b4;
+    margin-right: 2px;
+    font-size: 10px;
+    color: #f0f8ff;
+    text-align: center;
+    width: 10px;
+    display: inline-block;
+}
+
+.dcharts-container .baseline {
+    height: 1px;
+    background-color: black;
+}
+
+.dcharts-container .clear {
+    clear: both;
+}
+
+.dcharts-container .selected {
+    background-color: #f08080;
+}
+
+.dcharts-container .control-group {
+    padding-top: 10px;
+    margin: 10px;
+}
+
+.dcharts-container .table {
+    width: 70%;
+}
+
+.dcharts-container .table td, th {
+    padding: 5px;
+}
+
+.dcharts-container .table-header {
+    background-color: #00AFEF;
+    font-weight: bold;
+}
+
+.dcharts-container .table-row-odd {
+    background-color: #f0f8ff;
+}
+
+.dcharts-container .table-row-odd {
+    background-color: #d3d3d3;
+}
+
+.dcharts-container .code {
+    display: inline-block;
+    font-style: italic;
+    background-color: #d3d3d3;
+    border: #969696 solid thin;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dcharts-container .countdown{
+    width: 150px;
+    height: 150px;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.dcharts-container .x-axis path,
+.dcharts-container .y-axis path,
+.dcharts-container .x-axis line,
+.dcharts-container .y-axis line {
+    fill: none;
+    stroke: #DDD;
+    shape-rendering: crispEdges;
+}
+
+.dcharts-container .x-axis text,
+.dcharts-container .y-axis text {
+    font: 10px sans-serif;
+}
+
+.dcharts-container .x-axis .grid-line,
+.dcharts-container .y-axis .grid-line{
+    stroke: #EEE;
+    shape-rendering: crispEdges;
+    /*stroke-opacity: .2;*/
+}
+
+.dcharts-container .x-axis .line,
+.dcharts-container .y-axis .line,
+.dcharts-container .line{
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2;
+}
+
+.dcharts-container .dot {
+  fill: #FFF;
+  /*stroke: green;*/
+  /*stroke-opacity: 1;*/
+  r: 4.5;
+}
+
+.dcharts-container .area {
+    stroke: none;
+    fill: steelblue;
+    fill-opacity: .4;
+}
+
+.dcharts-container .pie text{
+    fill: white;
+    font-weight: bold;
+}
+
+.dcharts-container .circle {
+    stroke: none;
+    fill: red;
+    fill-opacity: .7;
+}
+
+.dcharts-container .cross {
+    stroke: none;
+    fill: blue;
+    fill-opacity: .7;
+}
+
+.dcharts-container .diamond {
+    stroke: none;
+    fill: green;
+    fill-opacity: .7;
+}
+
+.dcharts-container .square{
+    stroke: none;
+    fill: yellow;
+    fill-opacity: .7;
+}
+
+.dcharts-container .triangle-down{
+    stroke: none;
+    fill: blueviolet;
+    fill-opacity: .7;
+}
+
+.dcharts-container .triangle-up{
+    stroke: none;
+    fill: darkred;
+    fill-opacity: .7;
+}
+
+.dcharts-container .bubble{
+    /*fill-opacity: .3;*/
+}
+
+.dcharts-container .bar{
+    stroke: none;
+    fill: steelblue;
+}
+
+.dcharts-container .tooltip{
+  position: absolute;
+  padding: 10px;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 4px;
+  box-shadow: rgb(163, 163, 164) 0px 0px 20px -3px;
+}
+
+.dcharts-container .tooltip p {
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.dcharts-container .ring {
+  fill: none;
+  stroke: #c7141a;
+}
+
+.dcharts-container .card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+}
+
+.dcharts-container .legend {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 12px;
+}
+.dcharts-container .legend-r {
+    height: 20px;
+    line-height: 20px;
+}
+.dcharts-container .legend-r em {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+.dcharts-container .legend-r span {
+    display: inline-block;
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: -4px;
+}

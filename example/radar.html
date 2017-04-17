@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/d3.css">
+	<style type="text/css">
+	html, body{width: 100%; height: 100%;}
+	.box1{width: 49%; height: 80%; border: 1px solid #ddd; float: left;}
+	.box2{width: 49%; height: 80%; border: 1px solid #ddd; float: left;}
+	</style>
+	<script src="../lib/d3.js"></script>
+	<script src="../lib/jquery.js"></script>
+	<script src="../lib/dcharts.js"></script>
+	<script>
+	window.onload = function() {
+		var data = [
+		          // [//iPhone
+		          //   {axis:"Battery",value:0.22},
+		          //   {axis:"Brand",value:0.28},
+		          //   {axis:"Contract",value:0.29},
+		          //   {axis:"Design",value:0.17},
+		          //   {axis:"Have",value:0.22},
+		          //   {axis:"Large",value:0.02},
+		          //   {axis:"Price",value:0.21},
+		          //   {axis:"To",value:0.50},
+		          //   {axis:"Battery2",value:0.22},
+		          //   {axis:"Brand2",value:0.28},
+		          //   {axis:"Contract2",value:0.29},
+		          //   {axis:"Design2",value:0.17},
+		          //   {axis:"Have2",value:0.22},
+		          //   {axis:"Large2",value:0.02},
+		          //   {axis:"Price2",value:0.21},
+		          //   {axis:"To2",value:0.50}                      
+		          // ],
+		          // [//Samsung
+		          //   {axis:"Battery",value:0.27},
+		          //   {axis:"Brand",value:0.16},
+		          //   {axis:"Contract",value:0.35},
+		          //   {axis:"Design",value:0.13},
+		          //   {axis:"Have",value:0.20},
+		          //   {axis:"Large",value:0.13},
+		          //   {axis:"Price",value:0.35},
+		          //   {axis:"To",value:0.38},
+		          //   {axis:"Battery2",value:0.22},
+		          //   {axis:"Brand2",value:0.28},
+		          //   {axis:"Contract2",value:0.29},
+		          //   {axis:"Design2",value:0.17},
+		          //   {axis:"Have2",value:0.22},
+		          //   {axis:"Large2",value:0.02},
+		          //   {axis:"Price2",value:0.21},
+		          //   {axis:"To2",value:0.50}
+		          // ],
+		          // [//Nokia Smartphone
+		          //   {axis:"Battery",value:0.26},
+		          //   {axis:"Brand",value:0.10},
+		          //   {axis:"Contract",value:0.30},
+		          //   {axis:"Design",value:0.14},
+		          //   {axis:"Have",value:0.22},
+		          //   {axis:"Large",value:0.04},
+		          //   {axis:"Price",value:0.41},
+		          //   {axis:"To",value:0.30},
+		          //   {axis:"Battery2",value:0.22},
+		          //   {axis:"Brand2",value:0.28},
+		          //   {axis:"Contract2",value:0.29},
+		          //   {axis:"Design2",value:0.17},
+		          //   {axis:"Have2",value:0.22},
+		          //   {axis:"Large2",value:0.02},
+		          //   {axis:"Price2",value:0.21},
+		          //   {axis:"To2",value:0.50}
+		          // ],
+		          [//xiaomi
+		            {axis:"Battery",value:0.36},
+		            {axis:"Brand",value:0.20},
+		            {axis:"Contrac",value:0.10},
+		            {axis:"Design",value:0.04},
+		            {axis:"Have",value:0.22},
+		            {axis:"Large",value:0.64},
+		            {axis:"Price",value:0.21},
+		            {axis:"To",value:0.20},
+		            {axis:"Battery2",value:0.22},
+		            {axis:"Brand2",value:0.28},
+		            {axis:"Contract2",value:0.29},
+		            {axis:"Design2",value:0.17},
+		            {axis:"Have2",value:0.22},
+		            {axis:"Large2",value:0.02},
+		            {axis:"Price2",value:0.21},
+		            {axis:"To2",value:0.50}
+		          ]
+		        ];
+
+		function drawRadar() {
+			var box1 = new dcharts('.box1');
+			var box2 = new dcharts('.box2');
+			box1.radar(data);
+			box2.radar(data);
+		}
+
+		drawRadar();
+
+		$(window).on('resize', function() {
+			drawRadar();
+		});
+	};
+	</script>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "preset": "google",
+    "requireCurlyBraces": null,
+    "requireDotNotation": false,
+    "validateIndentation": 4,
+    "maximumLineLength": {
+      "value": 120,
+      "allExcept": ["comments", "regex"]
+    },
+    "requireCamelCaseOrUpperCaseIdentifiers": {
+        "ignoreProperties": true,
+        "strict": false,
+        "allExcept": ["$"]
+    }
+}
