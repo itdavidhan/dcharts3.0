@@ -17,7 +17,7 @@ gulp.task('dcct', function() {
         path + 'start.js', // NOTE: keep this first
         path + 'core.js',
         // path + 'handle.js',
-        // path + 'utils.js',
+        path + 'utils.js',
         // path + 'filter.js',
         // path + 'bar-chart.js',
         // path + 'cross-bar-chart.js',
@@ -27,7 +27,7 @@ gulp.task('dcct', function() {
         // path + 'stack-chart.js',
         // path + 'bubble-chart.js',
         // path + 'index-card.js',
-        // path + 'funnel-chart.js',
+        path + 'funnel.js',
         // path + 'legend.js',
         // path + 'callback.js',
         // path + 'tooltip.js',

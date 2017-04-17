@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="../css/d3.css">
+	<style type="text/css">
+	html, body{width: 100%; height: 100%;}
+	.box1{width: 49%; height: 80%; border: 1px solid #ddd; float: left;}
+	.box2{width: 49%; height: 80%; border: 1px solid #ddd; float: left;}
+	</style>
+	<script src="../lib/d3.js"></script>
+	<script src="../lib/jquery.js"></script>
+	<script src="../lib/dcharts.js"></script>
+	<script>
+	window.onload = function() {
+		var data = [
+			['Video Views', 1500], ['Comments', 300], ['Video Responses', 150]
+		];
+
+		var box1 = new dcharts('.box1');
+		box1.funnel(data);
+		
+
+		window.onresize = function() {
+			var box1 = new dcharts('.box1');
+			box1.funnel(data);
+		};
+	};
+	</script>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

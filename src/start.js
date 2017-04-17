@@ -1,8 +1,9 @@
 (function(window, d3, $) {
 
 	function dcharts(cls) {
-		this.ele = d3.select(cls);
-		this.$ele = $(cls);
+		this.cls = cls;
+		this.ele = d3.select(this.cls);
+		this.$ele = $(this.cls);
 		this.default = {};
 		this.default.WIDTH = this.$ele.width();
 		this.default.HEIGHT = this.$ele.height();

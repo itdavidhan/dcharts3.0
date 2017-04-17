@@ -2,6 +2,7 @@ dcharts.prototype = {
 	constructor: dcharts
 };
 
+// radar chart
 dcharts.prototype.radar = function(data, ops) {
 	var cfg = {
 	 w: this.default.WIDTH - this.default.MARGIN.left - this.default.MARGIN.right,                //Width of the circle
@@ -266,4 +267,6 @@ dcharts.prototype.radar = function(data, ops) {
 	  });
 	}//wrap    
 };
+
+
 
