@@ -42,10 +42,10 @@ dcharts.prototype.radar = function(data, ops) {
 	/////////////////////////////////////////////////////////
 
 	//Remove whatever chart with the same id/class was present before
-	this.ele.select("svg").remove();
-	
+	this.ele.select('.dcharts-container').remove();
+	var chartCont = this.ele.append('div').attr('class', 'dcharts-container');
 	//Initiate the radar chart SVG
-	var svg = this.ele.append("svg")
+	var svg = chartCont.append("svg")
 	        .attr("width",  cfg.w + cfg.margin.left + cfg.margin.right)
 	        .attr("height", cfg.h + cfg.margin.top + cfg.margin.bottom)
 	        .attr("class", "radar");

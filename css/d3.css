@@ -287,52 +287,52 @@ body {
     vertical-align: -4px;
 }
 
-.axis text {
+.dcharts-container .axis text {
   font: 10px sans-serif;
 }
 
-.axis path,
-.axis line {
+.dcharts-container .axis path,
+.dcharts-container .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
+.dcharts-container .x.axis path {
   display: none;
 }
 
-.axis line {
+.dcharts-container .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-.axis path {
+.dcharts-container .axis path {
   display: none;
 }
 
-.axis--y-inside line {
+.dcharts-container .axis--y-inside line {
   stroke: #fff;
   stroke-opacity: 1;
 }
 
-.axis--y-inside .tick:first-of-type line {
+.dcharts-container .axis--y-inside .tick:first-of-type line {
   stroke: #000;
 }
 
-.axis--y-inside text {
-  display: none;
+.dcharts-container .axis--y-inside text {
+  /*display: none;*/
 }
 
-.axis--x path {
-  display: none;
+.dcharts-container .axis--x path {
+  /*display: none;*/
 }
 
-.title {
+.dcharts-container .title {
   font-weight: bold;
 }
 
-rect {
+.dcharts-container rect {
   fill: steelblue;
 }

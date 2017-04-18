@@ -8,7 +8,7 @@ dcharts.prototype.multiDimBar = function(data, options) {
 
 	multiDim(data);
 
-	function multiDim() {
+	function multiDim(data) {
 		function _getDataKey(data) {
 
 			var arr1 = [];
@@ -30,6 +30,24 @@ dcharts.prototype.multiDimBar = function(data, options) {
 			return {key0: arr1, key1: arr2, measure: arr3};
 		}
 
+		_getDataVal(data);
+
+		function _getDataVal(data) {
+
+			var max = -10000;
+			var min = 10000;
+
+			$.each(data, function(index, item) {
+				$.each(item.dim, function(i, d) {
+					$.each(d.children, function(_i, _d) {
+						if(max < _d.value) max = _d.value;
+						if(min > _d.value) min = _d.value;
+					});
+				});
+			});
+			return {max: max, min: min};
+		}
+
 		var x0 = d3.scale.ordinal()
 		    .domain(_getDataKey(data).key0)
 		    .rangeBands([0, width-margin.left-margin.right], .2);
@@ -43,7 +61,7 @@ dcharts.prototype.multiDimBar = function(data, options) {
 		    .rangeRoundBands([0, height-margin.top-margin.bottom], .15, 0);
 
 		var y1 = d3.scale.linear()
-		    .domain([0, 1])
+		    .domain([0, _getDataVal(data).max])
 		    .range([y0.rangeBand(), 0]);
 
 		var z = d3.scale.category10();
@@ -61,9 +79,10 @@ dcharts.prototype.multiDimBar = function(data, options) {
 		    .orient("left")
 		    .ticks(4, "%");
 
-		ele.select("svg").remove();
+		ele.select('.dcharts-container').remove();
 
-		var svg = ele.append("svg")
+		var chartCont = ele.append('div').attr('class', 'dcharts-container');
+		var svg = chartCont.append("svg")
 		    .attr("width", width)
 		    .attr("height", height)
 		  .append("g")
@@ -92,8 +111,8 @@ dcharts.prototype.multiDimBar = function(data, options) {
 
 		multiple.append("g")
 		    .attr("class", "axis axis--y axis--y-inside")
-		    .call(yAxis);
-		    // .call(yAxis.tickSize(-(width-margin.left-margin.right)));
+		    // .call(yAxis);
+		    .call(yAxis.tickSize(-(width-margin.left-margin.right)));
 
 		multiple.append("text")
 		    .attr("class", "title")

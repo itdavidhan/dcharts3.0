@@ -70,7 +70,10 @@ dcharts.prototype.funnel = function(data, ops) {
     var DEFAULT_SPEED = 2.5;
     speed = typeof speed !== 'undefined' ? speed : DEFAULT_SPEED;
 
-    var funnelSvg = d3.select(elem).html('').append('svg:svg')
+    var funnelSvg = d3.select(elem).html('')
+              .append('div')
+              .attr('class', 'dcharts-container')
+              .append('svg:svg')
               .attr('width', this.width)
               .attr('height', this.height);
 

@@ -19,6 +19,18 @@ dcharts.prototype.oneDimBar = function(data, options) {
 			});
 			return {key: arr1, name: arr2};
 		}
+
+		function _getDataVal(data) {
+			var max = -10000;
+			var min = 10000;
+			$.each(data, function(index, item) {
+				for(var i in item) {
+					if('name' != i && max < item[i]) max = item[i]; 
+					if('name' != i && min > item[i]) min = item[i]; 
+				}
+			});
+			return {max: max, min: min};
+		}
 		
 		var x = d3.scale.ordinal()
 		    // .domain(d3.range(9))
@@ -28,9 +40,9 @@ dcharts.prototype.oneDimBar = function(data, options) {
 		var y0 = d3.scale.ordinal()
 		    .domain(_getDataKey(data).name)
 		    .rangeRoundBands([0, height-margin.top-margin.bottom], .15, 0);
-
+		console.log(y0.rangeBand());
 		var y1 = d3.scale.linear()
-		    .domain([0, .65])
+		    .domain([0, _getDataVal(data).max])
 		    .range([y0.rangeBand(), 0]);
 
 		var color = d3.scale.category10();
@@ -44,12 +56,13 @@ dcharts.prototype.oneDimBar = function(data, options) {
 		    .orient("left")
 		    .ticks(4, "%");
 
-		ele.select("svg").remove();
+		ele.select('.dcharts-container').remove();
 
-		var svg = ele.append("svg")
+		var chartCont = ele.append('div').attr('class', 'dcharts-container');
+		var svg = chartCont.append("svg")
 		    .attr("width", width)
 		    .attr("height", height)
-		  .append("g")
+		    .append("g")
 		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		svg.append("g")
@@ -67,9 +80,9 @@ dcharts.prototype.oneDimBar = function(data, options) {
 		    .attr("class", "axis axis--y axis--y-inside")
 		    .call(yAxis.tickSize(-(width-margin.left-margin.right)));
 
-		multiple.append("g")
-		    .attr("class", "axis axis--y axis--y-outside")
-		    .call(yAxis.tickSize(6));
+		// multiple.append("g")
+		//     .attr("class", "axis axis--y axis--y-outside")
+		//     .call(yAxis.tickSize(6));
 
 		multiple.append("text")
 		    .attr("class", "title")
