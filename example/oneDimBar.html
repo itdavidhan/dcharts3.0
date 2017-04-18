@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/d3.css">
+	<style type="text/css">
+	html, body{width: 100%; height: 100%;}
+	.box1{width: 49%; height: 80%; border: 1px solid #ddd; float: left;}
+	.box2{width: 49%; height: 80%; border: 1px solid #ddd; float: left;}
+	</style>
+	<script src="../lib/d3.js"></script>
+	<script src="../lib/jquery.js"></script>
+	<script src="../lib/dcharts.js"></script>
+	<script type="text/javascript">
+	window.onload = function() {
+		// key: 维度， measure: 度量
+		// 1个维度，多个度量
+		var data = [
+			  {
+			  	  'a' : "0.562025",
+			  	  'b' : "0.1364",
+			  	  'c' : "0.14125",
+			  	  'd' : "0.09035",
+			  	  'e' : "0.04715",
+			  	  'f' : "0.016875",
+			  	  'g' : "0.004975",
+			  	  'h' : "0.00085",
+			  	  'i' : "0.00015",
+			  	  name : "random-traversal"
+			  },
+			  {
+			  	  'a' : "0.262025",
+			  	  'b' : "0.1364",
+			  	  'c' : "0.14125",
+			  	  'd' : "0.09035",
+			  	  'e' : "0.04715",
+			  	  'f' : "0.016875",
+			  	  'g' : "0.004975",
+			  	  'h' : "0.00085",
+			  	  'i' : "0.00015",
+			  	  name : "wilsons-algorithm"
+			  },
+			  {
+			  	  'a' : "0.362025",
+			  	  'b' : "0.1364",
+			  	  'c' : "0.14125",
+			  	  'd' : "0.09035",
+			  	  'e' : "0.04715",
+			  	  'f' : "0.016875",
+			  	  'g' : "0.004975",
+			  	  'h' : "0.00085",
+			  	  'i' : "0.50015",
+			  	  name : "randomized-depth-first-traversal"
+			  },
+			  {
+			  	  'a' : "0.162025",
+			  	  'b' : "0.1364",
+			  	  'c' : "0.14125",
+			  	  'd' : "0.09035",
+			  	  'e' : "0.04715",
+			  	  'f' : "0.116875",
+			  	  'g' : "0.004975",
+			  	  'h' : "0.30085",
+			  	  'i' : "0.20015",
+			  	  name : "prims-algorithm"
+			  }
+		];
+
+		var ops = {
+			margin: {left: 80, right: 30, top: 30, bottom: 80}
+		};
+
+		var box1 = new dcharts('.box1');
+		box1.oneDimBar(data, ops);
+
+		window.onresize = function() {
+			var box1 = new dcharts('.box1');
+			box1.oneDimBar(data, ops);
+		};
+
+
+	};
+	</script>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

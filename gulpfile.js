@@ -16,6 +16,7 @@ gulp.task('dcct', function() {
     gulp.src([
         path + 'start.js', // NOTE: keep this first
         path + 'core.js',
+        path + 'radar.js',
         // path + 'handle.js',
         path + 'utils.js',
         // path + 'filter.js',
@@ -28,7 +29,8 @@ gulp.task('dcct', function() {
         // path + 'bubble-chart.js',
         // path + 'index-card.js',
         path + 'funnel.js',
-        path + 'complex-bar.js',
+        path + 'multiDimBar.js',
+        path + 'oneDimBar.js',
         // path + 'legend.js',
         // path + 'callback.js',
         // path + 'tooltip.js',

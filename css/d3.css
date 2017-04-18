@@ -301,3 +301,38 @@ body {
 .x.axis path {
   display: none;
 }
+
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis--y-inside line {
+  stroke: #fff;
+  stroke-opacity: 1;
+}
+
+.axis--y-inside .tick:first-of-type line {
+  stroke: #000;
+}
+
+.axis--y-inside text {
+  display: none;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.title {
+  font-weight: bold;
+}
+
+rect {
+  fill: steelblue;
+}

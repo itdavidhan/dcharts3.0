@@ -16,51 +16,51 @@
 	window.onload = function() {
 		// key: 维度， measure: 度量
 		var data = [
-			{
-				measure: '销量',
-				dim: [
-					{
-						key: '东部', 
-						children: [
-							{ key: '凉茶', value: 0.6 },
-							{ key: '绿茶', value: 0.2 },
-							{ key: '红茶', value: 0.2 },
-							{ key: '乌龙茶', value: 0.3 },
-							{ key: '绿豆汤', value: 0.4 }
-						]
-					},
-					{
-						key: '西部', 
-						children: [
-							{ key: '凉茶', value: 0.3 },
-							{ key: '绿茶', value: 0.8 },
-							{ key: '红茶', value: 0.4 },
-							{ key: '乌龙茶', value: 0.1 },
-							{ key: '绿豆汤', value: 0.6 }
-						]
-					},
-					{
-						key: '南部', 
-						children: [
-							{ key: '凉茶', value: 0.3 },
-							{ key: '绿茶', value: 0.4 },
-							{ key: '红茶', value: 0.1 },
-							{ key: '乌龙茶', value: 0.9 },
-							{ key: '绿豆汤', value: 0.8 }
-						]
-					},
-					{
-						key: '北部', 
-						children: [
-							{ key: '凉茶', value: 0.7 },
-							{ key: '绿茶', value: 0.6 },
-							{ key: '红茶', value: 0.8 },
-							{ key: '乌龙茶', value: 0.3 },
-							{ key: '绿豆汤', value: 0.5 }
-						]
-					}
-				]
-			},
+			// {
+			// 	measure: '销量',
+			// 	dim: [
+			// 		{
+			// 			key: '东部', 
+			// 			children: [
+			// 				{ key: '凉茶', value: 0.6 },
+			// 				{ key: '绿茶', value: 0.2 },
+			// 				{ key: '红茶', value: 0.2 },
+			// 				{ key: '乌龙茶', value: 0.3 },
+			// 				{ key: '绿豆汤', value: 0.4 }
+			// 			]
+			// 		},
+			// 		{
+			// 			key: '西部', 
+			// 			children: [
+			// 				{ key: '凉茶', value: 0.3 },
+			// 				{ key: '绿茶', value: 0.8 },
+			// 				{ key: '红茶', value: 0.4 },
+			// 				{ key: '乌龙茶', value: 0.1 },
+			// 				{ key: '绿豆汤', value: 0.6 }
+			// 			]
+			// 		},
+			// 		{
+			// 			key: '南部', 
+			// 			children: [
+			// 				{ key: '凉茶', value: 0.3 },
+			// 				{ key: '绿茶', value: 0.4 },
+			// 				{ key: '红茶', value: 0.1 },
+			// 				{ key: '乌龙茶', value: 0.9 },
+			// 				{ key: '绿豆汤', value: 0.8 }
+			// 			]
+			// 		},
+			// 		{
+			// 			key: '北部', 
+			// 			children: [
+			// 				{ key: '凉茶', value: 0.7 },
+			// 				{ key: '绿茶', value: 0.6 },
+			// 				{ key: '红茶', value: 0.8 },
+			// 				{ key: '乌龙茶', value: 0.3 },
+			// 				{ key: '绿豆汤', value: 0.5 }
+			// 			]
+			// 		}
+			// 	]
+			// },
 			{
 				measure: '利润',
 				dim: [
@@ -114,13 +114,11 @@
 		};
 
 		var box1 = new dcharts('.box1');
-
-		box1.complexBar(data, ops);
+		box1.multiDimBar(data, ops);
 
 		window.onresize = function() {
 			var box1 = new dcharts('.box1');
-
-			box1.complexBar(data, ops);
+			box1.multiDimBar(data, ops);
 		};
 
 
