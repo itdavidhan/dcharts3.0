@@ -40,7 +40,7 @@ dcharts.prototype.oneDimBar = function(data, options) {
 		var y0 = d3.scale.ordinal()
 		    .domain(_getDataKey(data).name)
 		    .rangeRoundBands([0, height-margin.top-margin.bottom], .15, 0);
-		console.log(y0.rangeBand());
+		 
 		var y1 = d3.scale.linear()
 		    .domain([0, _getDataVal(data).max])
 		    .range([y0.rangeBand(), 0]);
@@ -54,7 +54,8 @@ dcharts.prototype.oneDimBar = function(data, options) {
 		var yAxis = d3.svg.axis()
 		    .scale(y1)
 		    .orient("left")
-		    .ticks(4, "%");
+		    .ticks(4);
+		    // .ticks(4, "%");
 
 		ele.select('.dcharts-container').remove();
 

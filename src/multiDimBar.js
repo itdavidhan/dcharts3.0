@@ -150,7 +150,7 @@ dcharts.prototype.multiDimBar = function(data, options) {
 			.selectAll("rect")
 			  .data(function(d) { return d.children; })
 			.enter().append("rect")
-				.style("fill", function(d, i) { return color[i%(data[0].dim[0].children.length)]; })
+				.style("fill", function(d, i) { return color[i%color.length]; })
 			  .attr("width", x1.rangeBand())
 			  .attr("height", function(d) {return y0.rangeBand() - y1(d.value);})
 			  .attr("x", function(d, i) { return x1(d.key); })
